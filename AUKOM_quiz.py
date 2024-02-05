@@ -288,14 +288,14 @@ else:
 
 def plot_scores(score):
     labels = ['Correct', 'Incorrect']
-    sizes = [score, 20 - score] # Assuming 18 questions in total
+    sizes = [score, 20 - score] # Assuming 20 questions in total
     fig, ax = plt.subplots()
     ax.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=['green', 'red'])
     ax.axis('equal')
     plt.title("Quiz Results")
     plt.show()
 plot_scores(score)
-result = round(float((score / 20) * 100) , 1) # Assuming 18 questions in total
+result = round(float((score / 20) * 100) , 1) # Assuming 20 questions in total
 print("You got " + str(score) + " questions correct!")
 print(f"You got  {result}%.") 
 
