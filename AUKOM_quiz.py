@@ -71,7 +71,7 @@ answer = input("""Which of the following are illumination types for optical sens
                 Dark_room
                 Dark_field_incident_light
                 Transmitted_light
-               Answer:""")
+                Multiple Answers:""")
 
 user_words = set(word.lower() for word in answer.split())
 expected_answer = [ans.lower() for ans in expected_answers]
@@ -225,7 +225,7 @@ else:
 
 expected_answers = ["spherical", "sphere", "hollow_sphere", "disk", "cylinder", "point", "star"]
 answer = input("""Name three types of styli. If two word answer, use underscore (_)
-               Answer:""")
+               Multiple Answers:""")
 user_words = answer.split()
 
 crosscheck = [word for word in user_words if word.lower() in expected_answers]
@@ -245,7 +245,7 @@ answer = input("""Which types of features can be measured with an image processi
                 Through_holes
                 Blind_holes
                 Horizontal_surfaces
-               Answer:""")
+                Multiple Answers:""")
 
 user_words = set(word.lower() for word in answer.split())
 expected_answer = [ans.lower() for ans in expected_answers]
@@ -267,7 +267,7 @@ answer = input("""Which of the following drawing callouts conforms to specificat
                a
                b
                c
-               d \nAnswer:""")
+               d \nMultiple Answers:""")
 
 user_words = set(word.lower() for word in answer.split())
 expected_answer = [ans.lower() for ans in expected_answers]
