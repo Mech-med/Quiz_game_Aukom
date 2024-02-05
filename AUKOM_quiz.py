@@ -156,14 +156,20 @@ if answer.lower() == "b":
 else:
     print("Incorrect!")
 
-answer = input("Write an angle for a point in the third quadrant? e.g. 10° \n Answer:")
-answer = answer.replace(',', '.').strip("°")
-answer_float = float(answer)
-if 180 <= answer_float <= 270 :
-    print('Correct!')
-    score += 1
-else:
-    print("Incorrect!")
+while True:
+    answer = input("Write an angle for a point in the third quadrant? e.g. 10° \n Answer:")
+    try:
+        answer_float = float(answer.replace(',', '.').strip("°"))
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+        continue  # Ask the user for input again
+
+    if 180 <= answer_float <= 270:
+        print('Correct!')
+        score += 1
+        break 
+    else:
+        print("Incorrect! Please try again.")
 
 #defining the path of the image 
 script_dir = os.path.dirname(os.path.realpath(__file__))
